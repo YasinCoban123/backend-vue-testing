@@ -12,6 +12,9 @@ const __dirname = path.dirname(__filename)
 const app = express();
 const PORT = 3000;
 
+app.set("view engine", "ejs");
+app.set("views", path.dirname(__filename))
+
 app.use(express.urlencoded({ extended: true }))
 
 app.use((req: Request, res: Response, next: NextFunction) => {
